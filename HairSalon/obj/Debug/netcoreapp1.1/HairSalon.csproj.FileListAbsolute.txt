@@ -14,3 +14,11 @@
 /Users/Guest/Desktop/HairSalonDB/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.AssemblyInfo.cs
 /Users/Guest/Desktop/HairSalonDB/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.dll
 /Users/Guest/Desktop/HairSalonDB/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.pdb
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.deps.json
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.runtimeconfig.json
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.runtimeconfig.dev.json
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.dll
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.pdb
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.AssemblyInfo.cs
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.dll
+/Users/Guest/Desktop/HairSalonDB2/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.pdb

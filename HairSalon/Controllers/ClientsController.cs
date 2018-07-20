@@ -42,6 +42,28 @@ namespace HairSalon.Controllers
       return RedirectToAction("index");
     }
 
+    [HttpGet("/clients/{id}/edit")]
+    public ActionResult Edit(int id)
+    {
+      Dictionary<string,object> model = new Dictionary<string,object>{};
+      Client thisClient = Client.Find(id);
+      List<Stylist> allStylists = Stylist.GetAll();
+      model.Add("clientId", id);
+      model.Add("stylists", allStylists);
+      model.Add("thisClient", thisClient);
+
+
+      return View(model);
+    }
+    [HttpPost("/clients/{id}/edit")]
+    public ActionResult EditClient(int id)
+    {
+      Stylist newStylist = Stylist.Find(int.Parse(Request.Form["newstylist"]));
+      Client thisClient = Client.Find(id);
+      thisClient.AddStylist(newStylist);
+      return RedirectToAction("Index");
+    }
+
 
 
 
