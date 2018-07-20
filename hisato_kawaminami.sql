@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jul 16, 2018 at 06:51 AM
+-- Generation Time: Jul 21, 2018 at 01:40 AM
 -- Server version: 5.6.35
 -- PHP Version: 7.0.15
 
@@ -41,20 +41,56 @@ CREATE TABLE `clients` (
 INSERT INTO `clients` (`id`, `name`, `stylist_id`) VALUES
 (1, 'morgan', 6),
 (2, 'brook', 6),
-(3, 'asdf', 6),
 (4, 'jon', 7),
-(5, 'test', 6),
-(6, 'qqq', 6),
 (7, 'Paul', 8),
 (8, 'Ringo', 8),
-(9, 'Ringo', 8),
-(10, 'dfasdfasdfasdf', 8),
-(11, 'sdf', 6),
 (12, 'you', 9),
 (13, 'me', 6),
-(14, 'morgan', 10),
-(15, 'Zasc', 6),
-(16, 'cobain', 12);
+(16, 'cobain', 12),
+(17, 'Dave G', 13),
+(18, 'Shannon', 14);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clients_stylists`
+--
+
+CREATE TABLE `clients_stylists` (
+  `id` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `stylist_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `clients_stylists`
+--
+
+INSERT INTO `clients_stylists` (`id`, `client_id`, `stylist_id`) VALUES
+(1, 13, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `specialties`
+--
+
+CREATE TABLE `specialties` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `specialties_stylists`
+--
+
+CREATE TABLE `specialties_stylists` (
+  `id` int(11) NOT NULL,
+  `specialty_id` int(11) NOT NULL,
+  `stylist_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -65,21 +101,23 @@ INSERT INTO `clients` (`id`, `name`, `stylist_id`) VALUES
 CREATE TABLE `stylists` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `phone` int(11) NOT NULL
+  `phone` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `stylists`
 --
 
-INSERT INTO `stylists` (`id`, `name`, `phone`) VALUES
-(6, 'hisato', 1234),
-(7, 'Yoko Bono', 654321),
-(8, 'Jon Lemon', 98098098),
-(9, 'test', 1234123),
-(10, 'asdasdasd', 1232123123),
-(11, ' zxczxczxc', 12312),
-(12, 'kurt', 345);
+INSERT INTO `stylists` (`id`, `name`, `phone`, `client_id`) VALUES
+(6, 'Hisato', 1234, 0),
+(7, 'Yoko Bono', 654321, 0),
+(8, 'Jon Lemon', 98098098, 0),
+(12, 'kurt', 345, 0),
+(13, 'Kris N', 2061231234, 0),
+(14, 'Ozzy', 666, 0),
+(15, 'buzz', 0, 0),
+(16, 'buzz', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -89,6 +127,24 @@ INSERT INTO `stylists` (`id`, `name`, `phone`) VALUES
 -- Indexes for table `clients`
 --
 ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `clients_stylists`
+--
+ALTER TABLE `clients_stylists`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `specialties`
+--
+ALTER TABLE `specialties`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `specialties_stylists`
+--
+ALTER TABLE `specialties_stylists`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -105,12 +161,27 @@ ALTER TABLE `stylists`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT for table `clients_stylists`
+--
+ALTER TABLE `clients_stylists`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `specialties`
+--
+ALTER TABLE `specialties`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `specialties_stylists`
+--
+ALTER TABLE `specialties_stylists`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `stylists`
 --
 ALTER TABLE `stylists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
