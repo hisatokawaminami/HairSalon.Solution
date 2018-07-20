@@ -1,0 +1,20 @@
+<h1>Specialties</h1>
+
+<form action="/specialties" method="post">
+  <label for="newspecialty">Add Specialties to a Stylist</label>
+  <input id="newspecialty" name="newspecialty" type="text" required>
+
+  <ul>
+  @foreach(var specialties in Model)
+  {
+    <li>@specialties.GetName()</li>
+  }
+  </ul>
+
+  </select>
+  <button type="submit">Submit</button>
+</form><br>
+<a href='/stylists/add'>Add a stylist</a><br>
+<a href='/clients/add'>Add a client</a><br>
+<a href="/stylists">View all stylists</a><br>
+<a href="/clients">View all clients</a>

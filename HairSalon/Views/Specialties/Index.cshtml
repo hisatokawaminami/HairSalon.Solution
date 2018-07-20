@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Specialty</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <h1>Specialties</h1>
+  <table class="table table-hover table-danger">
+  <thead>
+    <tr>
+      <th scope="col">Specialties</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  @foreach(var specialties in Model)
+  {
+<tr>
+      <td>@specialties.GetName()  |<a href="/stylists/@stylists.GetId()/clients">View</a> | <a href="/stylists/@stylists.GetId()/edit">Edit</a>| <a href="/stylists/@stylists.GetId()/delete">Delete</a></td>
+
+
+
+
+
+</tr>
+  }
+
+  </tbody>
+</table>
+
+<ul>
+
+
+<a href='/stylists/add'>Add a stylist</a><br>
+<a href='/clients/add'>Add a client</a><br>
+<a href="/stylists">View all stylists</a><br>
+<a href="/clients">View all clients</a>
