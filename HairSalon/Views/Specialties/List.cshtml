@@ -1,0 +1,13 @@
+@using HairSalon.Models;
+<h1>Specialty: @Model.GetName()</h1>
+
+Stylists:
+<ul>
+  @foreach(var stylist in Model.GetStylists())
+  {
+    <li>@stylist.GetName()</li>
+  }
+</ul>
+<a href="/">Go Back</a><br>
+<a href="/stylists">View all stylists</a><br>
+<a href="/clients">View all clients</a>

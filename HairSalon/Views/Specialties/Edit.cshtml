@@ -1,19 +1,19 @@
 @using HairSalon.Models;
 
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>Stylists</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
 
-  <h1>Client: @Model["thisClient"].GetName()</h1><br>
+  <h1>Specialty: @Model["thisSpecialty"].GetName()</h1><br>
 
 
-  <form action='/clients/@Model["clientId"]/edit/' method="post">
+  <form action='/specialties/@Model["specialtyId"]/edit/' method="post">
 
     <label for="newstylist">Change a Stylist</label>
-    <select class="selectAuthor" name="newstylist">
+    <select class="selectStylist" name="newstylist">
       @foreach (var newstylists in Model["stylists"])
       {
       <option value="@newstylists.GetId()">@newstylists.GetName()</option>

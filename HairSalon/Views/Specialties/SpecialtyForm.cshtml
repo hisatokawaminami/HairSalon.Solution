@@ -1,20 +1,34 @@
+@using HairSalon.Models;
+
 <h1>Specialties</h1>
 
 <form action="/specialties" method="post">
   <label for="newspecialty">Add Specialties to a Stylist</label>
   <input id="newspecialty" name="newspecialty" type="text" required>
 
-  <ul>
-  @foreach(var specialties in Model)
-  {
-    <li>@specialties.GetName()</li>
-  }
-  </ul>
 
+  <label for="stylist">Select a Stylist</label>
+  <select class="selectStylist" name="stylist">
+    @foreach (var stylists in Model)
+    {
+    <option value="@stylists.GetId()">@stylists.GetName()</option>
+    }
   </select>
+
   <button type="submit">Submit</button>
 </form><br>
+
+<ul>
+@foreach(var specialties in Model)
+{
+  <li>@specialties.GetName()</li>
+}
+</ul>
 <a href='/stylists/add'>Add a stylist</a><br>
+<a href='/specialties/add'>Add a specialty</a><br>
 <a href='/clients/add'>Add a client</a><br>
-<a href="/stylists">View all stylists</a><br>
-<a href="/clients">View all clients</a>
+<br><br>
+
+<a href="/stylists">View all stylist</a><br>
+<a href="/specialties">View all specialties</a><br>
+<a href="/clients">View all clients</a><br>

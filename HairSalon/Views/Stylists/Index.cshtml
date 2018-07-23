@@ -17,7 +17,7 @@
   @foreach(var stylists in Model)
   {
 <tr>
-      <td>@stylists.GetName()  |<a href="/stylists/@stylists.GetId()/clients">View</a> | <a href="/stylists/@stylists.GetId()/edit">Edit</a>| <a href="/stylists/@stylists.GetId()/delete">Delete</a></td>
+      <td>@stylists.GetName()  |<a href="/stylists/@stylists.GetId()/clients">View the clients</a> | <a href="/stylists/@stylists.GetId()/edit">Edit</a>| <a href="/stylists/@stylists.GetId()/delete">Delete</a></td>
       <td>@stylists.GetPhone()  </td>
 
 
@@ -32,7 +32,11 @@
 <ul>
 
 
-<a href='/stylists/add'>Add a stylist</a><br>
-<a href='/clients/add'>Add a client</a><br>
-<a href="/stylists">View all stylists</a><br>
-<a href="/clients">View all clients</a>
+  <a href='/stylists/add'>Add a stylist</a><br>
+  <a href='/specialties/add'>Add a specialty</a><br>
+  <a href='/clients/add'>Add a client</a><br>
+  <br><br>
+
+  <a href="/stylists">View all stylist</a><br>
+  <a href="/specialties">View all specialties</a><br>
+  <a href="/clients">View all clients</a><br>
