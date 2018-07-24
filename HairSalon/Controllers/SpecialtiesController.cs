@@ -14,24 +14,33 @@ namespace HairSalon.Controllers
     [HttpGet("/specialties/add")]
     public ActionResult SpecialtyForm()
     {
-      return View(Specialty.GetAll());
+      return View(Stylist.GetAll());
     }
-    [HttpPost("/specialties")]
+    [HttpPost("/specialties/add")]
     public ActionResult CollectInfo(string newspecialty)
     {
       Specialty newSpecialty = new Specialty(newspecialty);
       newSpecialty.Save();
-      // List<Item> all = Item.GetAll();
+      Stylist newStylist = Stylist.Find(int.Parse(Request.Form["stylist"]));
+      newSpecialty.AddStylist(newStylist);
       return RedirectToAction("Index");
+      // // specialty.AddStylist();
+      // // List<Item> all = Item.GetAll();
+      // return RedirectToAction("Index");
     }
+
+
 
     [HttpGet("/specialties/{id}/stylists")]
     public ActionResult List(int id)
     {
+      Dictionary<string,object> model = new Dictionary<string,object>{};
       Specialty thisSpecialty = Specialty.Find(id);
-
       List<Stylist> allStylists = thisSpecialty.GetStylists();
-      return View(thisSpecialty);
+      model.Add("specialtyId", id);
+      model.Add("thisSpecialty", thisSpecialty);
+      model.Add("allStylists", allStylists);
+      return View(model);
     }
     [HttpGet("/specialties/{id}/delete")]
     public ActionResult Delete(int id)
