@@ -42,6 +42,9 @@ namespace HairSalon.Controllers
       model.Add("allStylists", allStylists);
       return View(model);
     }
+
+
+
     [HttpGet("/specialties/{id}/delete")]
     public ActionResult Delete(int id)
     {

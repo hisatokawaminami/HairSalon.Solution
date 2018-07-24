@@ -22,3 +22,14 @@
 /Users/Guest/Desktop/HairSalonDB2/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.AssemblyInfo.cs
 /Users/Guest/Desktop/HairSalonDB2/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.dll
 /Users/Guest/Desktop/HairSalonDB2/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.pdb
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\bin\Debug\netcoreapp1.1\HairSalon.deps.json
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\bin\Debug\netcoreapp1.1\HairSalon.runtimeconfig.json
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\bin\Debug\netcoreapp1.1\HairSalon.runtimeconfig.dev.json
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\bin\Debug\netcoreapp1.1\HairSalon.dll
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\bin\Debug\netcoreapp1.1\HairSalon.pdb
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp1.1\HairSalon.csprojAssemblyReference.cache
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp1.1\HairSalon.csproj.CoreCompileInputs.cache
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp1.1\HairSalon.AssemblyInfoInputs.cache
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp1.1\HairSalon.AssemblyInfo.cs
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp1.1\HairSalon.dll
+C:\Users\hisato\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp1.1\HairSalon.pdb
