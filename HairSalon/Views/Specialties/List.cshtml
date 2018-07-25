@@ -1,9 +1,9 @@
 @using HairSalon.Models;
 <h1>Specialty: @Model["thisSpecialty"].GetName()</h1>
 
-Stylists:
+<p>Stylists:</p>
 <ul>
-  @foreach(var stylist in Model["allStylists"])
+  @foreach (var stylist in Model["allStylists"])
   {
     <li>@stylist.GetName()</li>
   }
